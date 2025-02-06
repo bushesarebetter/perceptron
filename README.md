@@ -10,10 +10,9 @@ The perceptron generates a list of 100 random points, and initializes random wei
 
 the .vscode files should already be setup, this is for mingw64 compiler, make sure to install the one on winlibs.com and add it to env variables, also the base app.exe should be in the bin folder so you can probably just run it from there, also if you're gonna add on make sure to update the compilerPath in c_cpp_properties.json for intellisense.
 
-Comes with /include, /lib, and /bin folders for SFML-3.0.0 
-
+Make sure to install sfml for mingw64 from their homepage and put it somewhere accessible (preferably C:/SFML-3.0.0). Keep in mind this does come precompiled.
 ## Command to run (from terminal)
-g++ -g src/main.cpp -o bin/app -std=c++17 -I include -L lib -lsfml-graphics -lsfml-window -lsfml-system 
+g++ -g src/main.cpp -o bin/app -std=c++17 -IC:/SFML-3.0.0/include -LC:/SFML-3.0.0/lib -lsfml-graphics -lsfml-window -lsfml-system 
 
 The compiler NEEDS to support c++17 for certain libraries linked by Graphics and Windows
 
