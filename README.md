@@ -1,6 +1,22 @@
 # perceptron
-Single layer perceptron, written entirely in C++ for Windows x64
+Single layer perceptron, written entirely in C++ for Windows x64, inspired by TheCodingTrain
 
 # How it works
 
 The perceptron generates a list of 100 random points, and initializes random weights. From there, it classsifies the points as above or below the line, and we train it multiple times to eventually sort the points correctly
+
+
+# How to run:
+
+the .vscode files should already be setup, this is for mingw64 compiler, make sure to install the one on winlibs.com and add it to env variables, also the base app.exe should be in the bin folder so you can probably just run it from there, also if you're gonna add on make sure to update the compilerPath in c_cpp_properties.json for intellisense.
+
+Comes with /include, /lib, and /bin folders for SFML-3.0.0 
+
+## Command to run (from terminal)
+g++ -g src/main.cpp -o bin/app -std=c++17 -I include -L lib -lsfml-graphics -lsfml-window -lsfml-system 
+
+The compiler NEEDS to support c++17 for certain libraries linked by Graphics and Windows
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Yeah not gonna lie I enjoyed making this, it was definitely a lot more rewarding than the java and python versions (python not posted on github) and for future projects (e.g. multilayer perceptrons) I'll probably use C++.
